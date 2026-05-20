@@ -1,4 +1,51 @@
-# openvpn-with-dashboard
+A "turnkey" installation script to deploy an ultra-secure OpenVPN server paired with a real-time monitoring web interface, built specifically for **Debian 12**.
+
+This project combines a Public Key Infrastructure (PKI) based on **Elliptic Curve (EC)** cryptography for maximum performance, and a sleek Web dashboard offering live monitoring and a **self-destructing** (*Burn-after-reading*) configuration sharing system.
+
+---
+
+## ✨ Key Features
+
+* **🚀 100% Automated Installation:** A single script handles OS updates, dependencies, network routing (iptables), PKI, web server, and SSL setup.
+* **🔐 Cutting-Edge Cryptography (EC):** Uses `prime256v1` instead of classic RSA for faster connections (ideal for mobile devices) and instant certificate generation.
+* **⚡ Live Dashboard (AJAX):** Real-time CPU/RAM usage monitoring and a live view of connected users, refreshed every **2 seconds** without reloading the page.
+* **🔥 "Burn-After-Reading" Sharing:** Transmit `.ovpn` profiles via a unique link. As soon as the end-user downloads their file, the link and the temporary file self-destruct from the server instantly.
+* **🛡️ Hardened Web Security:** The interface is protected by a password (Apache Basic Auth), native Let's Encrypt integration (SSL HTTPS), anti-CSRF tokens on all forms, and private keys are stored strictly outside public web directories.
+* **🚷 Single Connection Limit:** Strict enforcement preventing the same profile from being connected on two different devices simultaneously.
+* **🗑️ Instant Revocation:** Delete a user in 1 click. This automatically updates the CRL (Certificate Revocation List) and immediately drops any active session for that user.
+
+---
+
+## 📋 Prerequisites
+
+Before running the script, ensure you have:
+1. A freshly installed **Debian 12** VPS.
+2. **Root** access.
+3. Ports **1194 (UDP/TCP)**, **80 (HTTP)**, and **443 (HTTPS)** open on your provider's firewall.
+4. *(Optional but recommended)* A **domain name** or subdomain (e.g., `vpn.your-domain.com`) pointing to your VPS public IP to successfully generate the SSL certificate.
+
+---
+
+## 🛠️ Installation
+
+Log in to your server as `root` via SSH, and run the following commands:
+
+**1. Download the script:**
+```bash
+wget [https://raw.githubusercontent.com/YOUR_NAME/YOUR_REPO/main/install.sh](https://raw.githubusercontent.com/YOUR_NAME/YOUR_REPO/main/install.sh) -O install.sh
+
+2. Make the script executable:
+Bash
+
+chmod +x install.sh
+
+3. Run the installer:
+Bash
+
+./install.sh
+
+The setup wizard will ask you a few simple questions (IP validation, UDP/TCP protocol, web interface credentials, and domain name). Once provided, the script handles everything else in the background.
+💻 Dashboard Usage Guide
 
 Once the installation is complete, access your control panel via https://vpn.your-domain.com (or http://YOUR_IP if you bypassed the domain step).
 You will be prompted to enter the credentials you chose during installation.
