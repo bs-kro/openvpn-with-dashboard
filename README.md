@@ -31,12 +31,11 @@ Before running the script, ensure you have:
 Log in to your server as `root` via SSH, and run the following commands:
 
 **1. Download the script:**
-```bash
-wget [https://raw.githubusercontent.com/bs-kro/openvpn-with-dashboard/emain/install.sh](https://raw.githubusercontent.com/bs-kro/openvpn-with-dashboard/emain/install.sh) -O install.sh
+git clone https://github.com/bs-kro/openvpn-with-dashboard.git
 
 2. Make the script executable:
 Bash
-
+cd openvpn-with-dashboard
 chmod +x install.sh
 
 3. Run the installer:
