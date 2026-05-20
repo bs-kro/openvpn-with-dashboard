@@ -35,7 +35,9 @@ git clone https://github.com/bs-kro/openvpn-with-dashboard.git
 
 2. Make the script executable:
 Bash
+
 cd openvpn-with-dashboard
+
 chmod +x install.sh
 
 3. Run the installer:
