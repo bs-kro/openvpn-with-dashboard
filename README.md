@@ -32,7 +32,7 @@ Log in to your server as `root` via SSH, and run the following commands:
 
 **1. Download the script:**
 ```bash
-wget [https://raw.githubusercontent.com/YOUR_NAME/YOUR_REPO/main/install.sh](https://raw.githubusercontent.com/YOUR_NAME/YOUR_REPO/main/install.sh) -O install.sh
+wget [https://raw.githubusercontent.com/bs-kro/openvpn-with-dashboard/emain/install.sh](https://raw.githubusercontent.com/bs-kro/openvpn-with-dashboard/emain/install.sh) -O install.sh
 
 2. Make the script executable:
 Bash
