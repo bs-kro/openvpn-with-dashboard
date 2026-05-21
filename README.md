@@ -103,6 +103,7 @@ If you wish to explore or modify the infrastructure manually:
 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page or submit a Pull Request.
+
 📄 License
 
 This project is licensed under the MIT License. You are free to use, modify, and distribute it.
