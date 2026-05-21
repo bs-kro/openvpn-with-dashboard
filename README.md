@@ -45,6 +45,7 @@ chmod +x install.sh
 ./install.sh
 
 The setup wizard will ask you a few simple questions (IP validation, UDP/TCP protocol, web interface credentials, and domain name). Once provided, the script handles everything else in the background.
+
 💻 Dashboard Usage Guide
 
 Once the installation is complete, access your control panel via https://vpn.your-domain.com (or http://YOUR_IP if you bypassed the domain step).
